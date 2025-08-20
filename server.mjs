@@ -2,13 +2,15 @@ import express from "express";
 import path from "path";
 import crypto from "crypto";
 import { google } from "googleapis";
+import fs from "fs";
 
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(process.cwd(), "public"))); // serve static files
 
 // --- Google Sheets setup ---
-const creds = JSON.parse(process.env.GOOGLE_CREDS);
+
+const creds = JSON.parse(fs.readFileSync(process.env.GOOGLE_CREDS_PATH, "utf8"));
 const spreadsheetId = process.env.SPREADSHEET_ID;
 
 const auth = new google.auth.GoogleAuth({
