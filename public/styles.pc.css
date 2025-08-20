@@ -1,0 +1,168 @@
+@media (min-width: 1000px) {
+
+    h1 {    
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    iframe {
+        box-shadow: 0 4px 8px 0 rgba(128, 0, 32, 0.2), 0 6px 20px 0 rgba(128, 0, 32, 0.19);
+    }
+
+    body { 
+        background-image: url(./assets/img/background.jpg);
+        background-color: rgba(255,255,255,0.1);
+        background-size: cover;
+        background-position: bottom;
+    }
+
+
+    .view {
+        height: 100dvh;
+        width: 80%;
+        scroll-snap-align: start;
+        margin: auto;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+
+    #welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .welcome-names-heading {
+        margin-top: 2rem;
+    }
+
+    .welcome-details {
+        text-align: center;
+    }
+
+    .main-navigation {
+        width: 80%;
+        ul {
+            list-style: none;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            a {
+                text-decoration: none;
+
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: var(--primary-colour);
+            }
+
+            a:hover {
+                border-bottom: 1px outset var(--primary-colour);
+            }
+        }
+    }
+
+    .secondary-wide-image {
+        display: none;
+    }
+
+    .pc-main-background {
+        width: 100%;
+        height: 60%;
+        margin-bottom: 5rem;
+
+        background-image: url(./assets/img/dip-wide.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+
+        box-shadow: 0 4px 8px 0 rgba(128, 0, 32, 0.2), 0 6px 20px 0 rgba(128, 0, 32, 0.19);
+    }
+
+
+    #rsvp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    .rsvp-details {
+        height: 80%;
+        max-width: 45%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            align-self: center;
+        }
+    }
+
+    .rsvp-form {
+        height: 80%;
+        flex-grow: 1;
+
+        background-image: url(./assets/img/walking-back.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+
+    #accommodation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+
+        .accommodation-mobile-heading {
+            display: none;
+        }
+    }
+
+    .accommodation-map {
+        height: 80%;
+        flex-grow: 1;
+    }
+
+    .accommodation-data {
+        height: 80%;
+        max-width: 45%;
+        flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            align-self: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+
+    #faq {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-top: 5%;
+            align-self: center;
+        }
+    }
+}

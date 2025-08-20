@@ -1,0 +1,48 @@
+:root {
+    --primary-colour: #800020
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+main {
+    height: 100dvh;
+    width: 100dvw;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: "Mrs Saint Delafield", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-colour);
+
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: "Mrs Saint Delafield", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-colour);
+
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary-colour);
+}
+
+li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary-colour);
+}
