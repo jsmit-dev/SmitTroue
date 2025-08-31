@@ -1,11 +1,34 @@
 @media (max-width: 1000px) {
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: large;
+        font-weight: 400; /* Example: regular weight */
+    }
+
+    label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400; /* Example: regular weight */
+    }
+
+    body { 
+        background-image: url(./img/mobile-background.png);
+        background-color: rgba(255,255,255,0.1);
+        background-size: cover;
+        background-position: bottom;
+    }
     
     h1 {
         font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: large;
+    }
+
+    input {
+        height: 1.5rem;
+        font-size: large;
     }
 
     .view {
@@ -175,13 +198,14 @@
         order: 2;
         width: 80%;
         margin: auto;
+        margin-top: 2rem;
     }
 
     .mobile-main-background {
         height: 60%;
         width: 100%;
 
-        background-image: url(./assets/img/dip-narrow.jpg);
+        background-image: url(./img/dip-narrow.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
@@ -192,7 +216,7 @@
 
     #rsvp {
         margin: auto;
-        height: 100dvh;
+        margin-top: 4rem;
 
         display: flex;
         flex-direction: column;
@@ -202,9 +226,12 @@
     }
 
     .rsvp-details {
+        margin: auto;
         width: 90%;
         h2 {
             padding: 0.6rem;
+            font-size: x-large;
+            font-weight: 400;
         }
     }
 
@@ -215,6 +242,82 @@
         border: none;
     }
 
+    #rsvp-inputs {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+
+        .amount-select {
+            height: 10%;
+            width: 100%;
+
+            margin-top: 1rem;
+
+            display: inline;
+
+            #rsvp-total-label {
+                float: left;
+            }
+
+            #rsvp-total-select {
+                font-size: large;
+                float: right;
+            }
+        }
+
+        #rsvp-names-container {
+            margin-top: 1rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            height: 50%;
+
+            section {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        #additional-notes {
+            margin-top: 1rem;
+            text-align: left;
+            height: 8rem;
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                height: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        #rsvp-form-submit-button {
+            height: 2rem;
+            width: 100%;
+            margin: auto;
+            margin-right: 0;
+
+            background-color: var(--primary-colour);
+            color: white;
+
+            justify-self: flex-end;
+        }
+
+        #cheers-container {
+            display: flex;
+            justify-content: center;
+
+            margin: auto;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
 
     #accommodation {
         height: 100dvh;
@@ -227,6 +330,7 @@
         h2 {
             order: 0;
             padding: 0.6rem;
+            font-size: x-large;
         }
     }
 
@@ -259,11 +363,28 @@
 
 
     #faq {
+        margin: auto;
+        margin-top: 3rem;
         height: 100dvh;
+        width: 90vw;
 
         h2 {
             text-align: center;
             padding: 0.6rem;
+            font-size: x-large;
+        }
+
+        ul {
+            width: 100%;
+            padding: 0;
+        }
+        
+        li {
+            font-size: small;
         }
     }
+}
+
+#end {
+    margin-top: 20rem;
 }

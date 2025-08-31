@@ -1,11 +1,20 @@
 @media (min-width: 1000px) {
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400; /* Example: regular weight */
+    }
+
+    label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400; /* Example: regular weight */
+    }
 
     h1 {    
         font-size: 4rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: x-large;
     }
 
     iframe {
@@ -13,10 +22,12 @@
     }
 
     body { 
-        background-image: url(./assets/img/background.jpg);
+        background-image: url(./img/background-3-pc.png);
         background-color: rgba(255,255,255,0.1);
         background-size: cover;
         background-position: bottom;
+
+        font-size: x-large;
     }
 
 
@@ -59,7 +70,8 @@
             a {
                 text-decoration: none;
 
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: "Quicksand", sans-serif;
+                font-size: large;
                 color: var(--primary-colour);
             }
 
@@ -78,7 +90,7 @@
         height: 60%;
         margin-bottom: 5rem;
 
-        background-image: url(./assets/img/dip-wide.jpg);
+        background-image: url(./img/dip-wide.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
@@ -91,32 +103,117 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 5rem;
+        gap: 0;
     }
 
-    .rsvp-details {
+    .rsvp-image {
+        margin: auto;
         height: 80%;
-        max-width: 45%;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: 60%;
+        padding: 3rem;
 
-        h2 {
-            align-self: center;
-        }
-    }
+        order: 0;
 
-    .rsvp-form {
-        height: 80%;
-        flex-grow: 1;
-
-        background-image: url(./assets/img/walking-back.jpg);
+        background-image: url(./img/sitting-cheers.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
+        background-position: left;
+    }
+
+    #rsvp-form {
+        order: 1;
+        height: 80%;
+        width: 40%;
+        margin: auto;
+        padding: 3rem;
+        background-color: white;
+
+        box-shadow: 0 4px 8px 0 rgba(128, 0, 32, 0.2), 0 6px 20px 0 rgba(128, 0, 32, 0.19);
+        text-align: left;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .rsvp-details {
+            h2 {
+                text-align: center;
+                font-size: xx-large;
+            }
+        }
+
+        #rsvp-inputs {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            #cheers-container {
+                display: flex;
+                justify-content: center;
+
+                margin: auto;
+
+                margin-top: 5rem;
+                height: 50%;
+            }
+
+            .amount-select {
+                height: 10%;
+                width: 100%;
+
+                margin-top: 3rem;
+
+                display: inline;
+
+                #rsvp-total-label {
+                    float: left;
+                }
+
+                #rsvp-total-select {
+                    font-size: large;
+                    float: right;
+                }
+            }
+
+            #rsvp-names-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                height: 50%;
+
+                input {
+                    height: 1.5rem;
+                    font-size: large;
+                    justify-self: flex-end;
+                    margin-left: 2rem;
+                }
+            }
+
+            #additional-notes {
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+
+                textarea {
+                    height: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            #rsvp-form-submit-button {
+                height: 10%;
+                width: 100%;
+                margin: auto;
+                margin-right: 0;
+
+                background-color: var(--primary-colour);
+                color: white;
+
+                justify-self: flex-end;
+            }
+        }
+
     }
 
 
@@ -147,6 +244,7 @@
 
         h2 {
             align-self: center;
+            font-size: xx-large;
         }
 
         ul {
@@ -163,6 +261,7 @@
         h2 {
             margin-top: 5%;
             align-self: center;
+            font-size: xx-large;
         }
     }
 }

@@ -13,12 +13,11 @@ main {
     height: 100dvh;
     width: 100dvw;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
 h1 {
-    font-family: "Mrs Saint Delafield", cursive;
+    font-family: "Ephesis", cursive;
     font-weight: 400;
     font-style: normal;
     color: var(--primary-colour);
@@ -28,7 +27,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Mrs Saint Delafield", cursive;
+    font-family: "DM Serif Text", serif;
     font-weight: 400;
     font-style: normal;
     color: var(--primary-colour);
@@ -42,7 +41,24 @@ p {
     color: var(--primary-colour);
 }
 
+ul {
+    list-style: none;
+}
+
 li {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: var(--primary-colour);
+}
+
+#end {
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    height: auto;
+    width: 100%;
+
+    p {
+        margin: auto;
+        font-size: medium;
+    }
 }
