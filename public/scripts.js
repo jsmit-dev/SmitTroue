@@ -1,10 +1,38 @@
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-const firstDate = Date.now();
-const secondDate = new Date(2026, 4, 4);
+const firstDate = new Date();
+const secondDate = new Date(2026, 3, 4);
+
+firstDate.setHours(0, 0, 0, 0);
+secondDate.setHours(0, 0, 0, 0);
+
+console.log(firstDate)
+console.log(secondDate)
 
 const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+let daeText = "dag";
 
-document.getElementById("days-to-go").innerHTML = `${diffDays} dae om te gaan!`;
+if (diffDays > 1)
+  daeText = "dae";
+
+document.getElementById("days-to-go").innerHTML = `${diffDays} ${daeText} om te gaan!`;
+
+function getDaysToGo(futureDateString) {
+  // Create Date objects for the current date and the future date
+  const today = new Date();
+  const futureDate = new Date(futureDateString);
+
+  // Set hours, minutes, seconds, and milliseconds to 0 for accurate day calculation
+  today.setHours(0, 0, 0, 0);
+  futureDate.setHours(0, 0, 0, 0);
+
+  // Calculate the difference in milliseconds
+  const timeDifference = futureDate.getTime() - today.getTime();
+
+  // Convert milliseconds to days
+  const daysToGo = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+  return daysToGo;
+}
 
 let navOpen = false;
 
@@ -137,8 +165,10 @@ form.addEventListener("submit", async (e) => {
 
     document.cookie = "completed=true; expires=Sun, 5 Apr 2026 12:00:00 UTC";
   }
+  else {
+    alert(result.message);
+  }
 
-  alert(result.message);
 });
 
 function getCookie(cname) {
