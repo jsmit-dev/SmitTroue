@@ -50,19 +50,6 @@ li {
     color: var(--primary-colour);
 }
 
-#end {
-    text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 1rem;
-    height: auto;
-    width: 100%;
-
-    p {
-        margin: auto;
-        font-size: medium;
-    }
-}
-
 
 #faq {
     ul {
@@ -77,4 +64,9 @@ li {
             padding-right: 1rem;
         }
     }
+}
+
+#end {
+    background-color: yellow;
+    margin-top: 100px;
 }

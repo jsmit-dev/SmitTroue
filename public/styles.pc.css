@@ -290,6 +290,7 @@
     #faq {
         display: flex;
         flex-direction: column;
+        height: auto;
 
         h2 {
             margin-top: 5%;
