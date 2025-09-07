@@ -80,24 +80,52 @@ rsvpAmountSelect.addEventListener("change", () => {
     for (let i = 1; i <= count; i++) {
       const guestContainer = document.createElement("section");
       guestContainer.id = `guest_${i}`;
+      guestContainer.classList.add("name-section");
 
       const nameLabel = document.createElement("label");
       nameLabel.textContent = `Naam van gas ${i}: `;
+      nameLabel.classList.add("input-name-label");
+
       const nameInput = document.createElement("input");
       nameInput.type = "text";
       nameInput.name = `guest_name_${i}`;
       nameInput.required = true;
+      nameInput.style.width = "90%";
+      nameInput.classList.add("input-name-input");
 
-      const attendanceLabel = document.createElement("label");
-      attendanceLabel.textContent = ` Bywoon? `;
-      const attendanceCheckbox = document.createElement("input");
-      attendanceCheckbox.type = "checkbox";
-      attendanceCheckbox.name = `guest_attending_${i}`;
+      const rbComingContainer = document.createElement("div");
+      rbComingContainer.classList.add("input-name-coming");
+
+      const rbComingLabel = document.createElement("label");
+      rbComingLabel.textContent = "Kom";
+
+      const rbComing = document.createElement("input");
+      rbComing.type = "radio";
+      rbComing.value = "Kom";
+      rbComing.checked = true;
+      rbComing.name = `guest_attending_${i}`
+
+      rbComingContainer.appendChild(rbComingLabel);
+      rbComingContainer.appendChild(rbComing);
+
+      const rbNotComingContainer = document.createElement("div");
+      rbNotComingContainer.classList.add("input-name-not-coming");
+
+      const rbNotComingLabel = document.createElement("label");
+      rbNotComingLabel.textContent = "Kom nie";
+
+      const rbNotComing = document.createElement("input");
+      rbNotComing.type = "radio";
+      rbNotComing.value = "Kom nie";
+      rbNotComing.name = `guest_attending_${i}`
+
+      rbNotComingContainer.appendChild(rbNotComingLabel);
+      rbNotComingContainer.appendChild(rbNotComing);
 
       guestContainer.appendChild(nameLabel);
       guestContainer.appendChild(nameInput);
-      // guestContainer.appendChild(attendanceLabel);
-      // guestContainer.appendChild(attendanceCheckbox);
+      guestContainer.appendChild(rbComingContainer);
+      guestContainer.appendChild(rbNotComingContainer);
 
       rsvpNamesContainer.appendChild(guestContainer);
     }
@@ -106,9 +134,6 @@ rsvpAmountSelect.addEventListener("change", () => {
     additionaNotesLabel.textContent = "Notas bv. dieet beperkings";
     const additionalNotesTextArea = document.createElement("textarea");
     additionalNotesTextArea.name = "notes";
-
-    // rsvpNamesContainer.appendChild(additionaNotesLabel);
-    // rsvpNamesContainer.appendChild(additionalNotesTextArea);
   }
   else{
     additionalNotesSection.style.display = "none";
@@ -120,15 +145,16 @@ rsvpAmountSelect.addEventListener("change", () => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  submitButton.disabled = true;
+
   const count = parseInt(rsvpAmountSelect.value, 10);
   const guests = [];
 
   for (let i = 1; i <= count; i++) {
     const name = document.querySelector(`#guest_${i} input[type="text"]`).value;
-    // const attending = document.querySelector(
-    //   `#guest_${i} input[type="checkbox"]`
-    // ).checked;
-    const attending = true;
+    const attending = document.querySelector(
+      `input[name="guest_attending_${i}"]:checked`
+    ).value == "Kom";
     guests.push({ name, attending });
   }
 
@@ -167,6 +193,8 @@ form.addEventListener("submit", async (e) => {
   }
   else {
     alert(result.message);
+
+  submitButton.disabled = false;
   }
 
 });
