@@ -62,3 +62,19 @@ li {
         font-size: medium;
     }
 }
+
+
+#faq {
+    ul {
+        li {
+            border: 1px solid rgba(128, 0, 32, 0.2);
+            box-shadow: 0 4px 16px 0 rgba(128, 0, 32, 0.37);
+            border-radius: 10px;
+            backdrop-filter: blur(3px);
+
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}

@@ -296,5 +296,10 @@
             align-self: center;
             font-size: xx-large;
         }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
     }
 }
