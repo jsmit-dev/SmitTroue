@@ -178,6 +178,10 @@
             flex-direction: column;
             justify-content: space-between;
 
+            #completedSection {
+                text-align: center;
+            }
+
             #cheers-container {
                 display: flex;
                 justify-content: center;
