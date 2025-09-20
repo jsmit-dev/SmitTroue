@@ -122,10 +122,11 @@
 
     #rsvp-form {
         order: 1;
-        height: 80%;
+        height: 87%;
+        padding: 1rem;
         width: 40%;
+        min-width: 400px;
         margin: auto;
-        padding: 3rem;
         background-color: white;
 
         box-shadow: 0 4px 8px 0 rgba(128, 0, 32, 0.2), 0 6px 20px 0 rgba(128, 0, 32, 0.19);
@@ -133,11 +134,11 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-around;
 
         .rsvp-details {
+            text-align: center;
             h2 {
-                text-align: center;
                 font-size: xx-large;
             }
         }
@@ -175,6 +176,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
 
             #cheers-container {
                 display: flex;
@@ -187,33 +189,36 @@
             }
 
             .amount-select {
-                height: 10%;
                 width: 100%;
-
-                margin-top: 1rem;
+                flex-grow: 1;
 
                 display: inline;
 
                 #rsvp-total-label {
-                    font-size: large;
+                    font-size: medium;
                     float: left;
+                    width: 80%;
                 }
 
                 #rsvp-total-select {
-                    font-size: large;
+                    font-size: medium;
                     float: right;
+                    width: 20%;
                 }
             }
 
             #rsvp-names-container {
+                flex-grow: 5;
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                justify-content: flex-start;
                 width: 100%;
-                height: 50%;
+
+                padding-right: 20px;
 
                 .name-section {
-                    font-size: medium;
+                    margin-top: 1vh;
+                    font-size: small;
                     display: grid;
                     grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
                     grid-template-rows: 1fr 1fr;
@@ -223,27 +228,25 @@
             }
 
             #additional-notes {
+                flex-grow: 3;
                 font-size: medium;
-                height: 20%;
                 display: flex;
                 flex-direction: column;
 
                 textarea {
-                    height: 100%;
-                    margin-bottom: 1rem;
+                    flex-grow: 1;
                 }
             }
 
             #rsvp-form-submit-button {
-                height: 10%;
+                flex-grow: 1;
                 width: 100%;
                 margin: auto;
                 margin-right: 0;
+                margin-top: 5px;
 
                 background-color: var(--primary-colour);
                 color: white;
-
-                justify-self: flex-end;
             }
         }
 
